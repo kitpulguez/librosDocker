@@ -1,0 +1,16 @@
+{% extends "base.njk" %}
+
+{% block titulo %}Libro | Ficha{% endblock %}
+
+{% block contenido %}
+
+    <h1>Ficha de libro</h1>
+    <div>
+        <ul>    
+            <li><strong> Titulo: </strong> {{libro.titulo}} </li>
+            <li><strong> Editorial: </strong> {{libro.editorial}} </li>
+            <li><strong> Precio: </strong> {{libro.precio}} </li>   
+            <li><img src="../public/portadas/{{libro.portada}}" width="30%"></img></li>
+        </ul>
+    </div>
+{% endblock %}

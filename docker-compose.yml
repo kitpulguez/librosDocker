@@ -1,0 +1,20 @@
+version: "3"
+services:
+  app:
+    container_name: applibros
+    ports:
+      - "8080:8080"
+    build: .
+    restart: unless-stopped
+    links:
+      - mymongodb
+    volumes:
+      - .:/usr/src/app
+  mymongodb:
+    container_name: mymongodatabase
+    image: mongo
+    ports:
+      - "27018:27017"
+    restart: unless-stopped
+    volumes:
+      - ../data:/data/db
