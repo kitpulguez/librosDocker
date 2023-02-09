@@ -10,6 +10,7 @@ services:
       - mymongodb
     volumes:
       - .:/usr/src/app
+      - /usr/src/app/node_modules
   mymongodb:
     container_name: mymongodatabase
     image: mongo
